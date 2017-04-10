@@ -462,12 +462,6 @@ UNIT.append(_NamedInt(
         doc=('RF_EXTERNAL (value unit is defined by an external reference '
              'channel)')))
 
-CALLBACK = _Enum('callback_flags', 'COMEDI_CB_', blacklist=['block', 'eobuf'])
-CALLBACK.eos.doc += ' (end of scan)'
-CALLBACK.eoa.doc += ' (end of acquisition)'
-CALLBACK.error.doc += ' (card error during acquisition)'
-CALLBACK.overflow.doc += ' (buffer overflow/underflow)'
-
 CONVERSION_DIRECTION = _Enum('conversion_direction', 'COMEDI_', whitelist=[
         'to_physical', 'from_physical'])
 
