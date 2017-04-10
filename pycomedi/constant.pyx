@@ -381,7 +381,7 @@ TRIG.bogus.doc += ' (do the motions)'
 TRIG.config.doc += ' (perform configuration, not triggering)'
 TRIG.wake_eos.doc += ' (wake up on end-of-scan events)'
 
-CMDF = _Flag('command_flags', 'CMDF_')
+CMDF = _Flag('command_flags', 'CMDF_', blacklist=['round_mask'])
 CMDF.priority.doc += (
     ' (try to use a real-time interrupt while performing command)')
 
